@@ -4,7 +4,6 @@ import './Header.css'
 
 
 const Header = ({ onSearch }) => {
-    //ici je vais avoir mon filtrage par categorie
   return (
   <header>
     <h1 className="title">Assessment Global Lizard</h1>
