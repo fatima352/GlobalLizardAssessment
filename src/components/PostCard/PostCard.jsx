@@ -11,7 +11,6 @@ const PostCard = ({id, title, date, author}) => {
         <p className="date">{date}</p>
         <p className="author">{author.name}</p>
         <img src={author.avatar} alt={author.name} />
-        <button className="btn">more details</button>
       </div>
   )
 }
