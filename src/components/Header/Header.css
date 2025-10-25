@@ -1,0 +1,18 @@
+/* Basic header styles (beginner-friendly) */
+header {
+	background: #f5f7fa;
+	padding: 16px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 12px;
+	border-bottom: 1px solid #e0e6ef;
+}
+
+.title {
+	margin: 0;
+	font-size: 1.25rem;
+	color: #111827;
+	font-weight: 700;
+}
+
