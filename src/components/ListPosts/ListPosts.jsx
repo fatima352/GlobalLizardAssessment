@@ -3,7 +3,7 @@ import PostCard from '../PostCard/PostCard.jsx';
 import {getPosts} from'../../services/posts.js'
 import './ListPosts.css'
 /*
-this component is charged ot dysplay the post getted with the fetch function getPost() form post.js and handle the pagination.
+this component is charged ot display the post getted with the fetch function getPost() form post.js and handle the pagination.
 it take the category from the filter component and send it to the getPost() function who will handel get the post of this category
 */
 
