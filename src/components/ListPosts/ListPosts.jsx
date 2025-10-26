@@ -58,23 +58,25 @@ const ListPosts = ({category}) => {
         const page = Math.max(1, Math.min(totalPages, n));
         setCurrentPage(page);
     }
+    const lastpage = true ? currentPage=== totalPages : false
+    const firstpage = true ? currentPage === 1 : false
 
-  return (
-    <div>
-        <div className="category">
-            <p>{category}</p>
-        </div>
-        <div className="list">
-            {detailsPost}
-        </div>
+    return (
+        <div>
+            <div className="category">
+                <p>{category}</p>
+            </div>
+            <div className="list">
+                {detailsPost}
+            </div>
 
-        <div className='page'>
-            <button onClick={() => goToPage(currentPage - 1)}>Prev</button>
-            <span> Page {currentPage} / {totalPages} </span>
-            <button onClick={() => goToPage(currentPage + 1)}>Next</button>
+            <div className='page'>
+                {!firstpage && <button onClick={() => goToPage(currentPage - 1)}>Prev</button>}
+                <span> Page {currentPage} / {totalPages} </span>
+                {!lastpage && <button onClick={() => goToPage(currentPage + 1)}>Next</button>}
+            </div>
         </div>
-    </div>
-  )
+    )
 }
 
 export default ListPosts
