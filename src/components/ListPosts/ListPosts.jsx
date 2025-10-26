@@ -32,7 +32,7 @@ const ListPosts = ({category}) => {
         setCurrentPage(1);
     }, [category]);
 
-    if (listPosts.length === 0) return <p>Any post found ...</p>;
+    if (listPosts.length === 0) return <p>No posts found</p>;
 
     //calculate indices for slice : for page 1, first=0 last=postParPage
     const firstPostIndex = (currentPage - 1) * postParPage;
