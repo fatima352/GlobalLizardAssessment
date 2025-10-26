@@ -9,8 +9,11 @@ const PostCard = ({id, title, date, author}) => {
       <div className="postCard">
         <h2 className="title">{title}</h2>
         <p className="date">{date}</p>
-        <p className="author">{author.name}</p>
-        <img src={author.avatar} alt={author.name} />
+        <div className="author">
+          <img src={author.avatar} alt={author.name} />
+           <p>{author.name}</p>
+        </div>
+
       </div>
   )
 }

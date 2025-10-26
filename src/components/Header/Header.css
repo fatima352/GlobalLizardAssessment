@@ -1,13 +1,17 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 header {
-	background: #f5f7fa;
-	padding: 16px;
+	background: #aac19a;
+	padding: 2rem;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 	gap: 12px;
 	border-bottom: 1px solid #e0e6ef;
 }
-
 .title {
 	margin: 0;
 	font-size: 1.25rem;

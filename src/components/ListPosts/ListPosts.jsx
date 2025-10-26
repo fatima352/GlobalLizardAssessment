@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import PostCard from '../PostCard/PostCard.jsx';
 import {getPosts} from'../../services/posts.js'
+import './ListPosts.css'
 /*
 this component is charged ot dysplay the post getted with the fetch function getPost() form post.js and handle the pagination.
 it take the category from the filter component and send it to the getPost() function who will handel get the post of this category
@@ -10,7 +11,7 @@ const ListPosts = ({category}) => {
     const [listPosts, setListPosts] = useState([]) //store the post getted form the api
     const [currentPage, setCurrentPage] = useState(1)
     // const [postParPage, setPostParPage] = useState(5)
-    const postParPage = 5
+    const postParPage = 10
 
     // get the posts from the api with the getPost function 
     useEffect(()=>{
@@ -60,9 +61,14 @@ const ListPosts = ({category}) => {
 
   return (
     <div>
-        <p>{category}</p>
-        {detailsPost}
-        <div>
+        <div className="category">
+            <p>{category}</p>
+        </div>
+        <div className="list">
+            {detailsPost}
+        </div>
+
+        <div className='page'>
             <button onClick={() => goToPage(currentPage - 1)}>Prev</button>
             <span> Page {currentPage} / {totalPages} </span>
             <button onClick={() => goToPage(currentPage + 1)}>Next</button>
